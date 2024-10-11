@@ -1,6 +1,8 @@
 import {TouchableOpacity, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useNavigation, useRoute} from '@react-navigation/native';
+import Images from '../assets/Index';
+import NavigationRoutes from '../shared/constants/NavigationRoutes';
 
 export default function ProductDetails() {
   const navigation = useNavigation();
@@ -11,7 +13,7 @@ export default function ProductDetails() {
   return (
     <View style={styles.imgbox}>
       <Image style={styles.img} source={{uri: items.image}} />
-    <Image style={styles.wishlisticon} source={require("../assets/icons/wishlist.png")}/>
+    <Image style={styles.wishlisticon} source={Images.wishlist}/>
       <View style={styles.details}>
         <Text style={styles.title}>{items.title.substring(0, 120)}</Text>
         <Text style={styles.description}>{items.description}</Text>
@@ -23,12 +25,12 @@ export default function ProductDetails() {
         </View>
         <View style={styles.btncontainer}>
             <View style={styles.btn}>
-          <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
+          <TouchableOpacity onPress={() => navigation.navigate(NavigationRoutes.cart)}>
               <Text style={styles.btnText}>Add To Cart</Text>
           </TouchableOpacity>
             </View>
             <View style={styles.btn}>
-          <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
+          <TouchableOpacity onPress={() => navigation.navigate(NavigationRoutes.cart)}>
               <Text style={styles.btnText}>Buy Now</Text>
           </TouchableOpacity>
             </View>

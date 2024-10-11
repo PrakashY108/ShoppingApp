@@ -11,6 +11,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import LoaderContainer from '../components/LoaderContainer';
 import { useNavigation } from '@react-navigation/native';
+import getproductsURL from '../Apiservices/Endpoints';
+import Errors from '../shared/constants/Errors';
 
 export default function HomeScreen() {
   const [productData, setProductData] = useState(null);
@@ -24,8 +26,8 @@ export default function HomeScreen() {
   const productdata = async () => {
     setisLoading(true);
     try {
-      const response = await axios.get('https://fakestoreapi.com/products');
-      if (response.length == 0) {
+      const response = await axios.get(getproductsURL);
+      if (response?.length == 0) {
         return;
       }
       const product = response.data;
@@ -33,7 +35,7 @@ export default function HomeScreen() {
       setisLoading(false);
     } catch (error) {
       setisLoading(false);
-      console.log('error while fetching');
+      console.log(Errors.fetchError);
     }
   };
   const renderItem = item => {

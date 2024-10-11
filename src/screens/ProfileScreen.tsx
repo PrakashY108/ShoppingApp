@@ -1,5 +1,7 @@
 import { View, Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
+import NavigationRoutes from '../shared/constants/NavigationRoutes'
+import Images from '../assets/Index'
 
 const ProfileScreen = () => {
   const Card = ({ title }) => {
@@ -10,7 +12,7 @@ const ProfileScreen = () => {
   return (
     <>
       <View style={styles.container}>
-        <Image style={styles.profileimg} source={require("../assets/icons/profile_fill.png")} />
+        <Image style={styles.profileimg} source={Images.user} />
         <Text style={styles.txt}>Username</Text>
       </View>
       <View>

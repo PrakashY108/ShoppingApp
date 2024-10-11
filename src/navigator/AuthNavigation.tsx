@@ -1,19 +1,18 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import ForgetPasswordScreen from '../screens/ForgetPasswordScreen';
 import HomeScreen from '../screens/HomeScreen';
-import {Image, StyleSheet, TouchableOpacity} from 'react-native';
-import BottomTabNavigator from './BottomTabNavigator';
-import CartScreen from '../screens/CartScreen';
+import {Image, StyleSheet} from 'react-native';
+
+import SplashScreen from '../screens/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 export default function AuthNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="Login"
+      initialRouteName="Splash"
       screenOptions={{
         headerStyle: {backgroundColor: 'green'},
         headerTintColor: 'white',
@@ -21,6 +20,11 @@ export default function AuthNavigator() {
         headerTitleStyle: {fontSize: 30},
         animation: 'ios',
       }}>
+      <Stack.Screen
+        name="Splash"
+        component={SplashScreen}
+        options={{headerShown:false}}
+      />
       <Stack.Screen
         name="Login"
         component={LoginScreen}

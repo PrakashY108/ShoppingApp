@@ -1,3 +1,4 @@
+
 const NavigationRoutes={
     login:'Login',
     signUp:'SignUp',
@@ -8,7 +9,9 @@ const NavigationRoutes={
     profile:'Profile',
     main:'Main',
     orders:'Orders',
-    updateProfile:'Update Profile'
+    updateProfile:'Update Profile',
+    ProductDetails:'ProductDetails',
+    DrawerNavigation:"DrawerNavigation"
 }
 
 export default NavigationRoutes

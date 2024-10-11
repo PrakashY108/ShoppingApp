@@ -2,12 +2,13 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import CustomInput from '../components/CustomInput'
 import CustomButtton from '../components/CustomButton'
+import Strings from '../shared/constants/Strings'
 
 export default function ForgetPasswordScreen() {
   return (
     <View style={styles.container}>
-      <CustomInput placeholder={"Enter Email or Phone Number"}/>
-      <CustomButtton title={"Get OTP"} screen={"H"}/>
+      <CustomInput placeholder={Strings.emailorphone}/>
+      <CustomButtton title={Strings.getotp} screen={"H"}/>
     </View>
   )
 }

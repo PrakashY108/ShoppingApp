@@ -37,7 +37,7 @@ const DrawerNavigation = () => {
         component={OrdersScreen}
         options={{
           headerRight: () => (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={navigation.openDrawer}>
               <Image
                 style={styles.icon}
                 source={require('../assets/icons/cart.png')}

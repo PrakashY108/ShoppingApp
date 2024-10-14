@@ -3,29 +3,31 @@ import React from 'react';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import Images from '../assets/Index';
 import NavigationRoutes from '../shared/constants/NavigationRoutes';
+import { addToCart } from '../store/actions/CartActions';
+import { useDispatch } from 'react-redux';
 
 export default function ProductDetails() {
   const navigation = useNavigation();
   const route = useRoute();
-  const items = route.params.item;
-  
-
+  const itemData = route?.params?.item;
+  const dispatch = useDispatch();
+ 
   return (
     <View style={styles.imgbox}>
-      <Image style={styles.img} source={{uri: items.image}} />
+      <Image style={styles.img} source={{uri: itemData.image}} />
     <Image style={styles.wishlisticon} source={Images.wishlist}/>
       <View style={styles.details}>
-        <Text style={styles.title}>{items.title.substring(0, 120)}</Text>
-        <Text style={styles.description}>{items.description}</Text>
+        <Text style={styles.title}>{itemData.title.substring(0, 120)}</Text>
+        <Text style={styles.description}>{itemData.description}</Text>
         <View style={styles.pricecontainer}>
-          <Text style={styles.price}> $ {items.price}</Text>
+          <Text style={styles.price}> $ {itemData.price}</Text>
           <Text style={styles.rating}>
-            Rating :{items.rating.rate}({items.rating.count})
+            Rating :{itemData.rating.rate}({itemData.rating.count})
           </Text>
         </View>
         <View style={styles.btncontainer}>
             <View style={styles.btn}>
-          <TouchableOpacity onPress={() => navigation.navigate(NavigationRoutes.cart)}>
+          <TouchableOpacity onPress={() =>dispatch(addToCart(itemData))} >
               <Text style={styles.btnText}>Add To Cart</Text>
           </TouchableOpacity>
             </View>

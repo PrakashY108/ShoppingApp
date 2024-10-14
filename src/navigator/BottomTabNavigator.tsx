@@ -23,10 +23,10 @@ const BottomTabNavigator = () => {
       screenOptions={{
         headerStyle: {backgroundColor: 'green'},
         headerTitleAlign: 'center',
-        tabBarActiveTintColor: 'lightgreen',
-        tabBarActiveBackgroundColor: 'green',
+        tabBarActiveTintColor: 'green',
+        tabBarActiveBackgroundColor: 'white',
         headerTitleStyle: {color: 'white', fontSize: 30},
-        tabBarStyle: {backgroundColor: 'lightgreen'},
+        tabBarStyle: {backgroundColor: 'white'},
         headerLeft: () => (
           <Icon
             source={require('../assets/icons/menu-button.png')}
@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
   icons: {
     height: 30,
     width: 30,
-    tintColor: 'white',
     margin: 10,
   },
 });

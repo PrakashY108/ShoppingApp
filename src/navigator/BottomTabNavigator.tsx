@@ -1,11 +1,11 @@
 import {StyleSheet, Image, TouchableOpacity, Text} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/HomeScreen';
-import ProfileScreen from '../screens/ProfileScreen';
-import WishlistScreen from '../screens/WishlistScreen';
+import HomeScreen from '../screens/BottomScreens/Home';
 import {useNavigation} from '@react-navigation/native';
-import CartScreen from '../screens/CartScreen';
+import CartScreen from '../screens/BottomScreens/Cart';
+import ProfileScreen from '../screens/BottomScreens/Profile';
+import WishlistScreen from '../screens/BottomScreens/Wishlist';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {

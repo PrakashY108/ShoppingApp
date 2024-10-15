@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import ProductsCard from '../components/productCard'
+import ProductsCard from '../../../components/productCard'
 
 const image="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
 const title="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
@@ -13,5 +13,4 @@ const WishlistScreen = () => {
     </View>
   )
 }
-
 export default WishlistScreen

@@ -7,7 +7,17 @@ const Strings = {
     email:"Please Enter Your Email ",
     emailorphone:"Enter Email or Phone Number",
     getotp:"Get OTP",
-    greet:"Welcome Back!"
+    greet:"Welcome Back!",
+    resetpassword:'Reset password?',
+    forgetpassword:"Forgot Password?",
+    donthaveaccount:"Don't have account?",
+    signup:"Sign Up",
+    alreadyuser:"Already User?",
+    login:"Login",
+    addtocart:"Add To Cart",
+    buynow:"Buy Now",
+    offers:"Get more offers"
+
     
 }
 export default Strings

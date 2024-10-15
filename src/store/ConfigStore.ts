@@ -1,9 +1,16 @@
-import { authReducer } from './Slices/AuthSlice';
-import { configureStore } from "@reduxjs/toolkit";
-import cartReducer from "./Slices/CartSlice";
 
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import authSlice from "./Slices/AuthSlice"
+import cartSlice from "./Slices/CartSlice";
+import wishlistSlice from "./Slices/WishlistSlice";
+
+const rootReducers =combineReducers({
+    auth:authSlice,
+    cart:cartSlice,
+    wishlist:wishlistSlice
+})
 const store = configureStore({
-    reducer:cartReducer,
-    authReducer
+   reducer:rootReducers
+   
 })
 export default store;

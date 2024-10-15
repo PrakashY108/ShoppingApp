@@ -1,9 +1,6 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import BottomTabNavigator from './BottomTabNavigator';
-import OrdersScreen from '../screens/OrdersScreen';
-
-import UpdateProfile from '../screens/UpdateProfile';
 import {TouchableOpacity, Image, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -32,7 +29,7 @@ const DrawerNavigation = () => {
         component={BottomTabNavigator}
         options={{headerShown: false}}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="Orders"
         component={OrdersScreen}
         options={{
@@ -65,7 +62,7 @@ const DrawerNavigation = () => {
           onPress={navigation.openDrawer}
         />
         }}
-      />
+      /> */}
     </Drawer.Navigator>
   );
 };

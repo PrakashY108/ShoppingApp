@@ -1,12 +1,12 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import LoginScreen from '../screens/LoginScreen';
-import SignUpScreen from '../screens/SignUpScreen';
-import ForgetPasswordScreen from '../screens/ForgetPasswordScreen';
-import HomeScreen from '../screens/HomeScreen';
 import {Image, StyleSheet} from 'react-native';
 
 import SplashScreen from '../screens/SplashScreen';
+import Login from '../screens/AuthScreen/Login';
+import SignUpConatiner from '../screens/AuthScreen/SignUp';
+import ForgetPassword from '../screens/AuthScreen/ForgetPassword';
+import HomeScreen from '../screens/BottomScreens/Home';
 
 const Stack = createNativeStackNavigator();
 export default function AuthNavigator() {
@@ -27,19 +27,19 @@ export default function AuthNavigator() {
       />
       <Stack.Screen
         name="Login"
-        component={LoginScreen}
+        component={Login}
         options={{title: 'Login Screen'}}
       />
       <Stack.Screen
         name="SignUp"
-        component={SignUpScreen}
+        component={SignUpConatiner}
         options={{title: 'Sign Up'}}
       />
       <Stack.Screen name="Home" component={HomeScreen} />
   
       <Stack.Screen
         name="ForgetPassword"
-        component={ForgetPasswordScreen}
+        component={ForgetPassword}
         options={{title: 'Forget Password'}}
       />
       

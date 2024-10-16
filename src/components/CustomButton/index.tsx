@@ -4,14 +4,15 @@ import {useNavigation} from '@react-navigation/native';
 import styles from './style';
 import Globalstyles from '../../themes/GLobalStyles';
 import FontSize from '../../themes/fontSize';
+
 export default function CustomButtton({title, screen}) {
   const navigation = useNavigation();
   return (
-    <View>
+    <View style={Globalstyles.margin_10}>
       <TouchableOpacity onPress={() => navigation.navigate(screen)}>
         <View
           style={[
-            Globalstyles.marginHorizontal_30,
+            Globalstyles.marginHorizontal_20,
             Globalstyles.backgroundColor_green,
             styles.btn,
           ]}>

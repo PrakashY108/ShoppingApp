@@ -1,12 +1,11 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Image, StyleSheet} from 'react-native';
-
 import SplashScreen from '../screens/SplashScreen';
 import Login from '../screens/AuthScreen/Login';
 import SignUpConatiner from '../screens/AuthScreen/SignUp';
 import ForgetPassword from '../screens/AuthScreen/ForgetPassword';
 import HomeScreen from '../screens/BottomScreens/Home';
+import Colors from '../themes/Colors';
 
 const Stack = createNativeStackNavigator();
 export default function AuthNavigator() {
@@ -15,7 +14,7 @@ export default function AuthNavigator() {
       initialRouteName="Splash"
       screenOptions={{
         headerStyle: {backgroundColor: 'green'},
-        headerTintColor: 'white',
+        headerTintColor: Colors.white,
         headerTitleAlign: 'center',
         headerTitleStyle: {fontSize: 30},
         animation: 'ios',
@@ -23,12 +22,12 @@ export default function AuthNavigator() {
       <Stack.Screen
         name="Splash"
         component={SplashScreen}
-        options={{headerShown:false}}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="Login"
         component={Login}
-        options={{title: 'Login Screen'}}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="SignUp"
@@ -36,21 +35,12 @@ export default function AuthNavigator() {
         options={{title: 'Sign Up'}}
       />
       <Stack.Screen name="Home" component={HomeScreen} />
-  
+
       <Stack.Screen
         name="ForgetPassword"
         component={ForgetPassword}
         options={{title: 'Forget Password'}}
       />
-      
     </Stack.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  icons: {
-    height: 30,
-    width: 30,
-    tintColor: 'white',
-  },
-});

@@ -1,14 +1,13 @@
 import {StyleSheet} from 'react-native';
 import FontSize from '../../../themes/fontSize';
+import Colors from '../../../themes/Colors';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    width: '100%',
-    borderBottomColor:"black",
-    borderBottomWidth:0.3,
-    justifyContent:"center",
-    margin:5
+    alignItems: 'center',
+    width: '90%',
+    justifyContent: 'center',
+    margin: 5,
   },
   logo: {
     height: 150,
@@ -17,26 +16,25 @@ const styles = StyleSheet.create({
   },
   imgcontainer: {
     width: '45%',
-   
+
     borderRadius: 10,
   },
-  image: {
-  
-  },
+  image: {},
   details: {
     // height: 200,
-    width: '55%',
-    padding: '2%',
+    width: '100%',
+    padding: 10,
     gap: 3,
   },
   title: {
     fontWeight: 'bold',
     alignItems: 'center',
-    color:"black",
+    color: 'black',
+    textAlign: 'left',
   },
   description: {
     alignItems: 'flex-start',
-    fontSize:20
+    fontSize: 20,
   },
   price: {
     alignItems: 'flex-start',
@@ -44,8 +42,8 @@ const styles = StyleSheet.create({
   carouselItem: {
     backgroundColor: '#fff',
     borderRadius: 8,
-    height: 200,
-    padding: 10,
+    height: 170,
+
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#000',
@@ -68,18 +66,36 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  categorylogo:{
-    height: 120,
-     width: 120
+  categoryimage: {
+    height: 50,
+    width: 50,
   },
-  categorycontainer:{
-    borderColor: 'black',
-    borderWidth: 2,
-    width:150,
+  categorycontainer: {
+    // borderColor: 'black',
+    // borderWidth: 1,
+    width: 80,
+    height: 80,
+    borderRadius: 40,
     alignItems: 'center',
-    height:150,
-    borderRadius:75,
-    justifyContent:"center"
-  }
+    justifyContent: 'center',
+    marginHorizontal: 10,
+    marginVertical: 10,
+    backgroundColor: 'white',
+  },
+  categorytext: {
+    fontSize: 12,
+    color: 'black',
+  },
+  activeIndex: {
+    height: 15,
+    width: 15,
+    borderRadius: 7,
+  },
+  dot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+  },
 });
 export default styles;

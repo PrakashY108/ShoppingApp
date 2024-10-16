@@ -14,7 +14,7 @@ const Globalstyles = StyleSheet.create({
   marginTop_20: {marginTop: 20},
   marginTop_30: {marginTop: 30},
   marginTop_40: {marginTop: 40},
-  
+
   marginBottom_10: {marginBottom: 10},
   marginBottom_20: {marginBottom: 20},
   marginBottom_30: {marginBottom: 30},
@@ -33,7 +33,7 @@ const Globalstyles = StyleSheet.create({
   paddingTop_20: {paddingTop: 20},
   paddingTop_30: {paddingTop: 30},
   paddingTop_40: {paddingTop: 40},
-  
+
   paddingBottom_10: {paddingBottom: 10},
   paddingBottom_20: {paddingBottom: 20},
   paddingBottom_30: {paddingBottom: 30},
@@ -53,19 +53,19 @@ const Globalstyles = StyleSheet.create({
   padding_30: {padding: 30},
   padding_40: {padding: 40},
 
-  rowCenter:{
-    flexDirection:"row",
-    alignItems:"center",
+  rowCenter: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  backgroundColor_white:{backgroundColor:Colors.white},
-  backgroundColor_green:{backgroundColor:Colors.green},
-  backgroundColor_black:{backgroundColor:Colors.black},
-  backgroundColor_blue:{backgroundColor:Colors.blue},
+  backgroundColor_white: {backgroundColor: Colors.white},
+  backgroundColor_green: {backgroundColor: Colors.green},
+  backgroundColor_black: {backgroundColor: Colors.black},
+  backgroundColor_blue: {backgroundColor: Colors.blue},
 
-  fontColor_white:{color: Colors.white},
-  fontColor_green:{color:Colors.green},
-  fontColor_black:{color:Colors.black},
-  fontColor_blue:{color:Colors.blue}
+  fontColor_white: {color: Colors.white},
+  fontColor_green: {color: Colors.green},
+  fontColor_black: {color: Colors.black},
+  fontColor_blue: {color: Colors.blue},
 });
 
 export default Globalstyles;

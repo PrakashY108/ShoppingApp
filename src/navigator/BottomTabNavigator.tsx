@@ -6,6 +6,8 @@ import {useNavigation} from '@react-navigation/native';
 import CartScreen from '../screens/BottomScreens/Cart';
 import ProfileScreen from '../screens/BottomScreens/Profile';
 import WishlistScreen from '../screens/BottomScreens/Wishlist';
+import Images from '../assets/Index';
+import NavigationRoutes from '../shared/constants/NavigationRoutes';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -13,7 +15,10 @@ const BottomTabNavigator = () => {
   const Icon = ({source, onPress}) => {
     return (
       <TouchableOpacity onPress={onPress}>
-        <Image style={styles.icons} source={source} />
+        <Image
+          style={{height: 32, width: 32, tintColor: 'white', margin: 20}}
+          source={source}
+        />
       </TouchableOpacity>
     );
   };
@@ -23,22 +28,31 @@ const BottomTabNavigator = () => {
       screenOptions={{
         headerStyle: {backgroundColor: 'green'},
         headerTitleAlign: 'center',
-        tabBarActiveTintColor: 'green',
-        tabBarActiveBackgroundColor: 'white',
+        tabBarActiveTintColor: 'white',
+        tabBarActiveBackgroundColor: 'lightgreen',
         headerTitleStyle: {color: 'white', fontSize: 30},
-        tabBarStyle: {backgroundColor: 'white'},
+        tabBarStyle: {
+          backgroundColor: 'white',
+          height: 65,
+          borderRadius: 200,
+          bottom: 5,
+          position: 'absolute',
+          marginHorizontal: 10,
+        },
         headerLeft: () => (
-          <Icon
-            source={require('../assets/icons/menu-button.png')}
-            onPress={navigation.openDrawer}
-          />
+          <Icon source={Images.menu} onPress={navigation.openDrawer} />
         ),
         headerRight: () => (
           <Icon
-            source={require('../assets/icons/cart.png')}
-            onPress={() => navigation.navigate('Cart')}
+            source={Images.cart}
+            onPress={() => navigation.navigate(NavigationRoutes.cart)}
           />
         ),
+        tabBarLabelStyle: {
+          fontSize: 15,
+          fontWeight: 'bold',
+          color: 'black',
+        },
       }}>
       <Tab.Screen
         name="Home"
@@ -50,7 +64,6 @@ const BottomTabNavigator = () => {
               source={require('../assets/icons/home.png')}
             />
           ),
-          title: 'Shopping App',
         }}
       />
       <Tab.Screen
@@ -58,27 +71,21 @@ const BottomTabNavigator = () => {
         component={WishlistScreen}
         options={{
           tabBarIcon: () => (
-            <Image
-              style={styles.icons}
-              source={require('../assets/icons/wishlist.png')}
-            />
-          )
+            <Image style={styles.icons} source={Images.heart} />
+          ),
         }}
       />
       <Tab.Screen
         name="Cart"
         component={CartScreen}
         options={{
-          tabBarIcon: () => (
-            <Image
-              style={styles.icons}
-              source={require('../assets/icons/cart.png')}
-            />
-          ), headerRight: () => (
+          tabBarIcon: () => <Image style={styles.icons} source={Images.cart} />,
+          headerRight: () => (
             <Icon
-              source={require('../assets/icons/wishlist.png')}
-              onPress={()=>navigation.navigate("Wishlist")}
-            />)
+              source={Images.heart}
+              onPress={() => navigation.navigate(NavigationRoutes.wishList)}
+            />
+          ),
         }}
       />
       <Tab.Screen
@@ -101,7 +108,7 @@ const styles = StyleSheet.create({
   icons: {
     height: 30,
     width: 30,
-    margin: 10,
+    margin: 20,
   },
 });
 export default BottomTabNavigator;

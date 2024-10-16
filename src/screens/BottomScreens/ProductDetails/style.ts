@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
+import Colors from '../../../themes/Colors';
 
 const styles = StyleSheet.create({
   imgbox: {
@@ -9,7 +10,6 @@ const styles = StyleSheet.create({
   img: {
     height: 350,
     resizeMode: 'contain',
-    
   },
   details: {
     padding: 20,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     marginBottom: 10,
-    fontSize:20
+    fontSize: 20,
   },
   description: {
     fontSize: 16,
@@ -51,8 +51,16 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   rating: {
-    fontSize: 14,
-    color: '#888',
+    fontSize: 30,
+    color: 'orange',
+    marginLeft: 50,
+  },
+  ratingcount: {
+    padding: 10,
+    borderRadius: 20,
+    backgroundColor: 'grey',
+    color: 'white',
+    fontSize: 20,
   },
   btncontainer: {
     flexDirection: 'row',
@@ -71,25 +79,24 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
-  icon:{
-    height:30,
-    width:30
+  icon: {
+    height: 30,
+    width: 30,
   },
   box: {
-    height: 35,
-    width: "90%",
-    marginHorizontal: "4%",
-    marginVertical: "3%",
+    height: 30,
+    width: '90%',
+    marginHorizontal: '4%',
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 3,
-    marginBottom:20,
-    justifyContent:"space-between",
-    flexDirection:"row",
-    alignItems:"center",
-    paddingHorizontal:20
-
-  }
+    marginBottom: 20,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    backgroundColor: '#f5faf7',
+  },
 });
 
 export default styles;

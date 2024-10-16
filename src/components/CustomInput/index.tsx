@@ -1,20 +1,20 @@
-import {View, TextInput} from 'react-native';
+import {View, TextInput, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import styles from './style';
-import Globalstyles from '../../themes/GLobalStyles';
 import FontSize from '../../themes/fontSize';
-const CustomInput = ({placeholder}) => {
+import Images from '../../assets/Index';
+const CustomInput = ({placeholder, search}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <TextInput
-        style={[
-          Globalstyles.margin_10,
-          styles.input,
-          Globalstyles.padding_10,
-          FontSize.fontsize_16,
-        ]}
+        style={[styles.input, FontSize.fontsize_16]}
         placeholder={placeholder}
       />
+      {search ? (
+        <TouchableOpacity>
+          <Image style={styles.icon} source={Images.search} />
+        </TouchableOpacity>
+      ) : null}
     </View>
   );
 };

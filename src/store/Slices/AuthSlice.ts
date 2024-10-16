@@ -1,5 +1,4 @@
-
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface UserData {
   id: number;
@@ -23,7 +22,7 @@ const initialState: AuthState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-reducers: {
+  reducers: {
     loginRequest(state) {
       state.isLoading = true;
       state.error = null;
@@ -41,10 +40,11 @@ reducers: {
       state.error = action.payload;
     },
     logout(state) {
-      return initialState; 
+      return initialState;
     },
   },
 });
 
-export const { loginRequest, loginSuccess, loginFailure, logout } = authSlice.actions;
+export const {loginRequest, loginSuccess, loginFailure, logout} =
+  authSlice.actions;
 export default authSlice.reducer;

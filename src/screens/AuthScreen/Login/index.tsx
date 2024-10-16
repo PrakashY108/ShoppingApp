@@ -9,7 +9,6 @@ import Strings from '../../../shared/constants/Strings';
 import Images from '../../../assets/Index';
 import Globalstyles from '../../../themes/GLobalStyles';
 import FontSize from '../../../themes/fontSize';
-import Colors from '../../../themes/Colors';
 
 export default function Login() {
   const navigation = useNavigation();
@@ -20,27 +19,33 @@ export default function Login() {
         Globalstyles.container,
         styles.container,
         Globalstyles.backgroundColor_white,
-        Globalstyles.paddingVertical_10,
       ]}>
+      <View style={styles.header}>
+        <Text style={[styles.headertitle, Globalstyles.fontColor_white]}>
+          {Strings.login}
+        </Text>
+      </View>
       <Image style={styles.logo} source={Images.logo} />
       <Text style={[Globalstyles.marginVertical_20, FontSize.fontsize_30]}>
         {Strings.greet}
       </Text>
-      <CustomInput placeholder={Strings.username} />
-      <CustomInput placeholder={Strings.password} />
+      <CustomInput search={false} placeholder={Strings.username} />
+      <CustomInput search={false} placeholder={Strings.password} />
       <View style={[Globalstyles.rowCenter, styles.forgot]}>
-        <Text style={[FontSize.fontsize_14]}>{Strings.donthaveaccount}</Text>
-        <TouchableOpacity
+        <TouchableOpacity 
           onPress={() => navigation.navigate(NavigationRoutes.forgetPassword)}>
-          <Text style={[styles.link]}>{Strings.resetpassword}</Text>
+          <Text style={[styles.link]}>{Strings.forgetpassword}</Text>
         </TouchableOpacity>
       </View>
+      <View style={{marginVertical:15}}>
+
       <CustomButtton
-        title={'Login '}
+        title={Strings.login}
         screen={NavigationRoutes.DrawerNavigation}
       />
-      <View style={[Globalstyles.rowCenter, styles.forgot]}>
-        <Text style={FontSize.fontsize_14}>{Strings.forgetpassword}</Text>
+      </View>
+      <View style={[Globalstyles.rowCenter,{gap:10}]}>
+        <Text style={FontSize.fontsize_14}>{Strings.donthaveaccount}</Text>
         <TouchableOpacity
           onPress={() => navigation.navigate(NavigationRoutes.signUp)}>
           <Text style={[styles.link]}>{Strings.signup}</Text>

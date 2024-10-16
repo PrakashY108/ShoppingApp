@@ -1,5 +1,4 @@
-// store/slices/wishlistSlice.js
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface WishlistItem {
   id: number;
@@ -20,7 +19,7 @@ const wishlistSlice = createSlice({
   reducers: {
     addToWishlist(state, action: PayloadAction<WishlistItem>) {
       const existingIndex = state.items.findIndex(
-        item => item.id === action.payload.id
+        item => item.id === action.payload.id,
       );
       if (existingIndex === -1) {
         state.items.push(action.payload);
@@ -36,5 +35,6 @@ const wishlistSlice = createSlice({
 });
 
 // Export actions and reducer
-export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
+export const {addToWishlist, removeFromWishlist, clearWishlist} =
+  wishlistSlice.actions;
 export default wishlistSlice.reducer;

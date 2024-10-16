@@ -1,6 +1,5 @@
-const Errors={
-    fetchError:"Error while fetching"
-
-}
+const Errors = {
+  fetchError: 'Error while fetching',
+};
 
 export default Errors;

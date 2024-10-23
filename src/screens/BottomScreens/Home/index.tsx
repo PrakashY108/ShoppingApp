@@ -20,6 +20,7 @@ import Carousel, {Pagination} from 'react-native-snap-carousel-v4';
 import Images from '../../../assets/Index';
 import CustomInput from '../../../components/CustomInput';
 import Strings from '../../../shared/constants/Strings';
+import Colors from '../../../themes/Colors';
 
 export default function HomeScreen() {
   const [productData, setProductData] = useState(null);
@@ -151,8 +152,8 @@ export default function HomeScreen() {
               justifyContent: 'space-between',
               paddingHorizontal: 10,
               alignItems: 'center',
-              borderColor: 'grey',
-              borderWidth: 1,
+             
+              
             }}>
             <Text style={{color: 'black', fontSize: 33, marginBottom: 10}}>
               {Strings.categories}

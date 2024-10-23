@@ -13,7 +13,7 @@ export default function AuthNavigator() {
     <Stack.Navigator
       initialRouteName="Splash"
       screenOptions={{
-        headerStyle: {backgroundColor: 'green'},
+        headerStyle: {backgroundColor:Colors.lightblue},
         headerTintColor: Colors.white,
         headerTitleAlign: 'center',
         headerTitleStyle: {fontSize: 30},

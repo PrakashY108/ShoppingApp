@@ -8,6 +8,7 @@ import ProfileScreen from '../screens/BottomScreens/Profile';
 import WishlistScreen from '../screens/BottomScreens/Wishlist';
 import Images from '../assets/Index';
 import NavigationRoutes from '../shared/constants/NavigationRoutes';
+import Colors from '../themes/Colors';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -16,7 +17,7 @@ const BottomTabNavigator = () => {
     return (
       <TouchableOpacity onPress={onPress}>
         <Image
-          style={{height: 32, width: 32, tintColor: 'white', margin: 20}}
+          style={{height: 26, width: 26, margin: 20}}
           source={source}
         />
       </TouchableOpacity>
@@ -26,11 +27,11 @@ const BottomTabNavigator = () => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        headerStyle: {backgroundColor: 'green'},
+        headerStyle: {backgroundColor:Colors.lightblue},
         headerTitleAlign: 'center',
         tabBarActiveTintColor: 'white',
-        tabBarActiveBackgroundColor: 'lightgreen',
-        headerTitleStyle: {color: 'white', fontSize: 30},
+        tabBarActiveBackgroundColor: Colors.grey,
+        headerTitleStyle: {color:Colors.black, fontSize: 30},
         tabBarStyle: {
           backgroundColor: 'white',
           height: 65,

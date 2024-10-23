@@ -61,6 +61,7 @@ const Globalstyles = StyleSheet.create({
   backgroundColor_green: {backgroundColor: Colors.green},
   backgroundColor_black: {backgroundColor: Colors.black},
   backgroundColor_blue: {backgroundColor: Colors.blue},
+  backgroundColor_lightblue: {backgroundColor: Colors.lightblue},
 
   fontColor_white: {color: Colors.white},
   fontColor_green: {color: Colors.green},

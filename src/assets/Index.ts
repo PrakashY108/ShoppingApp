@@ -4,7 +4,7 @@ const Images={
      cart:require('../assets/icons/cart.png'),
      home:require('../assets/icons/cart.png'),
      chat:require('../assets/icons/chat.png'),
-     menu:require('../assets/icons/menu-button.png'),
+     menu:require('../assets/icons/menu.png'),
      trash:require('../assets/icons/trash.png'),
      profile:require('../assets/icons/profile.png'),
      search:require('../assets/icons/search.png'),

@@ -21,7 +21,7 @@ export default function Login() {
         Globalstyles.backgroundColor_white,
       ]}>
       <View style={styles.header}>
-        <Text style={[styles.headertitle, Globalstyles.fontColor_white]}>
+        <Text style={[styles.headertitle, Globalstyles.fontColor_black]}>
           {Strings.login}
         </Text>
       </View>

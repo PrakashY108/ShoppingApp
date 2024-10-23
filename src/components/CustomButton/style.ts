@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
     width: 350,
     height: 50,
     borderRadius: 50,
+    borderColor:"black",
+    borderWidth:1
   },
   btnText: {
     alignItems: 'center',

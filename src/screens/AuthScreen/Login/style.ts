@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     width: '100%',
-    backgroundColor: 'red',
+   
   },
   logo: {
     height: 150,
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     color: 'blue',
   },
   header: {
-    backgroundColor: Colors.green,
+    backgroundColor: Colors.lightblue,
     height: 60,
     width: '100%',
     alignItems: 'center',

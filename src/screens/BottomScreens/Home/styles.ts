@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: 10,
     marginVertical: 10,
-    backgroundColor: 'white',
+    backgroundColor:Colors.lightblue,
   },
   categorytext: {
     fontSize: 12,

@@ -13,12 +13,12 @@ export default function CustomButtton({title, screen}) {
         <View
           style={[
             Globalstyles.marginHorizontal_20,
-            Globalstyles.backgroundColor_green,
+            Globalstyles.backgroundColor_lightblue,
             styles.btn,
           ]}>
           <Text
             style={[
-              Globalstyles.fontColor_white,
+              Globalstyles.fontColor_black,
               styles.btnText,
               FontSize.fontsize_30,
             ]}>
